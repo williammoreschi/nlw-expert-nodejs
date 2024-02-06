@@ -1,0 +1,11 @@
+## Development
+@base_url = http://localhost:3333
+@contentType = application/json
+
+### Criação de enquete
+POST {{base_url}}/polls  HTTP/1.1
+content-type: {{contentType}}
+
+{
+	"title": "Teste"
+}
