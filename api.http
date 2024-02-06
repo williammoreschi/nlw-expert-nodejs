@@ -7,5 +7,18 @@ POST {{base_url}}/polls  HTTP/1.1
 content-type: {{contentType}}
 
 {
-	"title": "Teste"
+	"title": "Qual melhor framework Node.js?",
+	"options": ["Express", "Fastify", "NestJS", "HapiJS"]
+}
+
+### Buscando enquete pelo ID
+GET {{base_url}}/polls/6414eb2f-32af-4eaf-bb29-ca99d1656b17  HTTP/1.1
+content-type: {{contentType}}
+
+### Voltando em uma enquete
+POST {{base_url}}/polls/6414eb2f-32af-4eaf-bb29-ca99d1656b17/votes  HTTP/1.1
+content-type: {{contentType}}
+
+{
+	"pollOptionId": "4bec345e-b23d-4806-bb06-3209e101737b"
 }
