@@ -50,7 +50,7 @@ export async function voteOnPool(app: FastifyInstance){
           }
         })
 
-        const votes = await redes.zincrby(pollId, -1, userPreviousVotePoll?.pollOptionId)
+        const votes = await redes.zincrby(pollId, -1, userPreviousVotePoll.pollOptionId)
 
         voting.public(pollId, { pollOptionId, votes: Number(votes)})
         
